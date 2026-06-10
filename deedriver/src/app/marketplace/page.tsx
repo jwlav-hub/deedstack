@@ -4,8 +4,8 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Marketplace - Tokenized Wyoming Real Estate',
-  description: 'Browse tokenized Wyoming real estate listings on DeedStack. Fractional DEED tokens starting at $100. Reg D 506(c) — accredited investors only. Subject to securities restrictions and transfer eligibility.',
+  title: 'Marketplace - Tokenized Real Estate',
+  description: 'Browse tokenized real estate listings on DeedStack. Fractional DEED tokens starting at $100. Reg D 506(c) — accredited investors only. Subject to securities restrictions and transfer eligibility.',
 };
 
 const listings = [
@@ -22,112 +22,37 @@ const listings = [
     projectedYield: 7.2,
     minInvestment: 100,
     status: 'ILLUSTRATIVE',
-    statusClass: 'active',
     sqft: 3840,
     bedBath: '4 bd / 3.5 ba',
     gradient: 'linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 50%, #1e4a30 100%)',
     accentColor: 'var(--pine)',
     highlight: 'Teton County — highest median home value in the US',
+    details: null,
   },
   {
-    id: 'cheyenne-01',
-    city: 'Cheyenne',
-    state: 'WY',
-    address: '1102 Capitol Ave, Cheyenne, WY 82001',
-    type: 'Multi-Family Residential',
-    totalValue: 680000,
-    tokens: 68000,
-    tokensAvailable: 20400,
+    id: 'kuala-lumpur-01',
+    city: 'Kuala Lumpur',
+    state: 'MY',
+    address: 'Bukit Bintang District, Kuala Lumpur, Malaysia',
+    type: 'Mixed-Use Development',
+    totalValue: 80000000,
+    tokens: 8000000,
+    tokensAvailable: 8000000,
     pricePerToken: 10,
-    projectedYield: 6.8,
+    projectedYield: 8.5,
     minInvestment: 100,
     status: 'ILLUSTRATIVE',
-    statusClass: 'active',
-    sqft: 2210,
-    bedBath: '3 bd / 2 ba (duplex)',
-    gradient: 'linear-gradient(135deg, #1c2a3a 0%, #2a3d55 50%, #1a2d48 100%)',
-    accentColor: '#4A90D9',
-    highlight: 'State capital — stable government-sector rental demand',
-  },
-  {
-    id: 'casper-01',
-    city: 'Casper',
-    state: 'WY',
-    address: '750 Mountain View Rd, Casper, WY 82601',
-    type: 'Single-Family Residential',
-    totalValue: 1200000,
-    tokens: 120000,
-    tokensAvailable: 36000,
-    pricePerToken: 10,
-    projectedYield: 7.5,
-    minInvestment: 100,
-    status: 'ILLUSTRATIVE',
-    statusClass: 'active',
-    sqft: 3120,
-    bedBath: '4 bd / 3 ba',
-    gradient: 'linear-gradient(135deg, #2a1a1a 0%, #4a2d2d 50%, #3a2020 100%)',
+    sqft: null,
+    bedBath: null,
+    gradient: 'linear-gradient(135deg, #1a1f3a 0%, #2a3060 50%, #1a2550 100%)',
     accentColor: 'var(--gold)',
-    highlight: "Wyoming's second-largest city — oil & gas sector hub",
-  },
-  {
-    id: 'sheridan-01',
-    city: 'Sheridan',
-    state: 'WY',
-    address: '38 Powder River Ln, Sheridan, WY 82801',
-    type: 'Single-Family Residential',
-    totalValue: 890000,
-    tokens: 89000,
-    tokensAvailable: 17800,
-    pricePerToken: 10,
-    projectedYield: 6.4,
-    minInvestment: 100,
-    status: 'ILLUSTRATIVE',
-    statusClass: 'active',
-    sqft: 2680,
-    bedBath: '3 bd / 2.5 ba',
-    gradient: 'linear-gradient(135deg, #1a1a2a 0%, #2d2d4a 50%, #20203a 100%)',
-    accentColor: '#9B88E8',
-    highlight: 'Ranked one of the best small cities in America',
-  },
-  {
-    id: 'cody-01',
-    city: 'Cody',
-    state: 'WY',
-    address: '512 Buffalo Bill Ave, Cody, WY 82414',
-    type: 'Single-Family Residential',
-    totalValue: 1500000,
-    tokens: 150000,
-    tokensAvailable: 52500,
-    pricePerToken: 10,
-    projectedYield: 8.1,
-    minInvestment: 100,
-    status: 'ILLUSTRATIVE',
-    statusClass: 'active',
-    sqft: 4100,
-    bedBath: '5 bd / 4 ba',
-    gradient: 'linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 50%, #203a20 100%)',
-    accentColor: '#52B788',
-    highlight: 'Gateway to Yellowstone — premium tourism-driven demand',
-  },
-  {
-    id: 'laramie-01',
-    city: 'Laramie',
-    state: 'WY',
-    address: '209 University Ave, Laramie, WY 82070',
-    type: 'Single-Family Residential',
-    totalValue: 440000,
-    tokens: 44000,
-    tokensAvailable: 15400,
-    pricePerToken: 10,
-    projectedYield: 7.8,
-    minInvestment: 100,
-    status: 'ILLUSTRATIVE',
-    statusClass: 'active',
-    sqft: 1840,
-    bedBath: '3 bd / 2 ba',
-    gradient: 'linear-gradient(135deg, #2a1a2a 0%, #4a2d4a 50%, #3a203a 100%)',
-    accentColor: '#E88BC8',
-    highlight: 'University of Wyoming — consistent student/faculty rental market',
+    highlight: 'Full development tokenization — 120 condo units for sale + 120 rental units',
+    details: {
+      units: 240,
+      condoUnits: 120,
+      rentalUnits: 120,
+      currency: 'USD',
+    },
   },
 ];
 
@@ -173,13 +98,13 @@ export default function MarketplacePage() {
 
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
               <div>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>DEEDRIVER MARKETPLACE</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.4)', marginBottom: 12 }}>DEEDSTACK MARKETPLACE</p>
                 <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 600, color: 'var(--white)', lineHeight: 1.15, marginBottom: '1rem' }}>
-                  Wyoming real estate,<br />
-                  <span style={{ color: '#52B788' }}>tokenized and tradeable.</span>
+                  Real estate, anywhere.<br />
+                  <span style={{ color: '#52B788' }}>Tokenized and tradeable.</span>
                 </h1>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.0625rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.6)', maxWidth: 520 }}>
-                  Browse fractional DEED token listings for verified Wyoming properties. Start from $100. Designed for compliant secondary transfer — subject to securities restrictions, eligibility checks, transfer rules, and available marketplace liquidity.
+                  Browse fractional DEED token listings for verified properties. Start from $100. Designed for compliant secondary transfer — subject to securities restrictions, eligibility checks, transfer rules, and available marketplace liquidity.
                 </p>
               </div>
 
@@ -202,8 +127,8 @@ export default function MarketplacePage() {
             <div className="flex flex-wrap gap-3 items-center">
               {[
                 { label: 'All Properties', active: true },
-                { label: 'Single-Family', active: false },
-                { label: 'Multi-Family', active: false },
+                { label: 'Residential', active: false },
+                { label: 'Development', active: false },
                 { label: 'Highest Yield', active: false },
               ].map((f) => (
                 <button
@@ -297,8 +222,17 @@ export default function MarketplacePage() {
 
                       {/* Property details */}
                       <div className="flex gap-4 mb-4">
-                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.bedBath}</span>
-                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.sqft.toLocaleString()} sqft</span>
+                        {listing.details ? (
+                          <>
+                            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.details.condoUnits} condo units</span>
+                            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.details.rentalUnits} rental units</span>
+                          </>
+                        ) : (
+                          <>
+                            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.bedBath}</span>
+                            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'var(--slate)' }}>{listing.sqft!.toLocaleString()} sqft</span>
+                          </>
+                        )}
                       </div>
 
                       {/* Key stats */}
@@ -410,7 +344,7 @@ export default function MarketplacePage() {
               ACCREDITED INVESTORS ONLY · REG D 506(c)
             </p>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.6rem, 3vw, 2.25rem)', fontWeight: 600, color: 'var(--white)', marginBottom: '1rem', lineHeight: 1.2 }}>
-              Own Wyoming real estate<br />for $100.
+              Own tokenized real estate<br />for $100.
             </h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.55)', maxWidth: 480, margin: '0 auto 2.5rem' }}>
               Join the waitlist and receive your free Equity Opportunity Report. No commitment. No credit card required.
