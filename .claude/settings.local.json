@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/.git)"
+    ]
+  }
+}
