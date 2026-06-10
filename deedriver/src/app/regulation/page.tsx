@@ -12,7 +12,7 @@ const advantages = [
   {
     num: '02',
     title: 'DAO LLC Structure',
-    body: 'Wyoming created the first legal framework for Decentralized Autonomous Organizations as limited liability companies. DeedRiver operates within this framework, giving token structures a recognized legal home that other states cannot match.',
+    body: 'Wyoming created the first legal framework for Decentralized Autonomous Organizations as limited liability companies. DeedStack operates within this framework, giving token structures a recognized legal home that other states cannot match.',
     note: 'Wyoming DAO LLC Act, W.S. § 17-31-101.',
   },
   {
@@ -24,7 +24,7 @@ const advantages = [
   {
     num: '04',
     title: 'Reg D 506(c) Clarity',
-    body: 'Wyoming regulators have been consistent and proactive in clarifying the rules around securities token offerings. DeedRiver launches under Reg D 506(c) — the federal exemption for accredited investor offerings — with full state alignment.',
+    body: 'Wyoming regulators have been consistent and proactive in clarifying the rules around securities token offerings. DeedStack launches under Reg D 506(c) — the federal exemption for accredited investor offerings — with full state alignment.',
     note: 'Accredited investors only. Not available in all states.',
   },
 ];
@@ -68,7 +68,7 @@ export default function WyomingPage() {
             </h1>
             <p className="text-body" style={{ fontSize: '1.0625rem', maxWidth: 560 }}>
               No other state has built a more complete legal framework for tokenized assets.
-              DeedRiver is incorporated in Wyoming because the law is here. The clarity is here.
+              DeedStack is incorporated in Wyoming because the law is here. The clarity is here.
               The structure is here.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function WyomingPage() {
                 },
                 {
                   title: 'Incorporated Where It Counts',
-                  body: 'DeedRiver is a Wyoming corporation. The legal structure, the token issuance, and the fund operations are all governed under Wyoming law — the most favorable in the country.',
+                  body: 'DeedStack is a Wyoming corporation. The legal structure, the token issuance, and the fund operations are all governed under Wyoming law — the most favorable in the country.',
                 },
                 {
                   title: 'Accredited Investor Framework',

@@ -95,7 +95,7 @@ export default function HomePage() {
               className="text-body max-w-xl mb-10"
               style={{ fontSize: '1.125rem', lineHeight: 1.7, color: 'var(--stone)' }}
             >
-              DeedRiver lets homeowners tokenize their residential equity and earn
+              DeedStack lets homeowners tokenize their residential equity and earn
               institutional-grade returns — without giving up the deed, taking on
               debt, or paying a broker.
             </p>
@@ -453,7 +453,7 @@ export default function HomePage() {
             style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
           >
             <p style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: 'var(--slate)' }}>
-              © 2026 DeedRiver. Wyoming-incorporated.
+              © 2026 DeedStack. Wyoming-incorporated.
             </p>
             <p style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: 'var(--slate)', maxWidth: 480 }}>
               Securities offered under Reg D 506(c). For accredited investors only.

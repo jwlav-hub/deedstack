@@ -6,25 +6,25 @@ const steps = [
   {
     num: '01',
     title: 'Tokenization',
-    body: 'DeedRiver mints 1,000 DEED tokens representing 100% of your net equity — property value minus any existing mortgage balance. Your deed never moves. Title stays with you at all times. You receive all 1,000 tokens immediately.',
+    body: 'DeedStack mints 1,000 DEED tokens representing 100% of your net equity — property value minus any existing mortgage balance. Your deed never moves. Title stays with you at all times. You receive all 1,000 tokens immediately.',
     note: 'Works with mortgaged homes. The mortgage holder\'s first lien is untouched.',
   },
   {
     num: '02',
     title: 'Pledge — not borrowing',
-    body: 'You pledge a portion of your tokens (typically 60–80%) to DeedRiver Capital. Capital is advanced against the pledged tokens at ~70% LTV. You never incur personal debt — the advance is against token collateral, not against you personally.',
+    body: 'You pledge a portion of your tokens (typically 60–80%) to DeedStack Capital. Capital is advanced against the pledged tokens at ~70% LTV. You never incur personal debt — the advance is against token collateral, not against you personally.',
     note: 'Unpledged tokens remain fully unencumbered. The pledge can be reduced or exited at any time.',
   },
   {
     num: '03',
     title: 'Fund Deployment',
-    body: 'Advanced capital is deployed into the DeedRiver Capital fund — managed by an institutional-grade team with a verified five-year track record. The fund targets a 12% gross annual return — a conservative figure relative to the historical track record.',
+    body: 'Advanced capital is deployed into the DeedStack Capital fund — managed by an institutional-grade team with a verified five-year track record. The fund targets a 12% gross annual return — a conservative figure relative to the historical track record.',
     note: 'Past performance does not guarantee future results.',
   },
   {
     num: '04',
     title: 'Yield Distribution',
-    body: 'Returns are distributed quarterly to your DeedRiver account, net of platform fees. Withdraw, reinvest, or accumulate. Exit anytime by reducing or removing your pledge to recover your full token position.',
+    body: 'Returns are distributed quarterly to your DeedStack account, net of platform fees. Withdraw, reinvest, or accumulate. Exit anytime by reducing or removing your pledge to recover your full token position.',
     note: 'No lockup period. No prepayment penalty.',
   },
 ];
@@ -106,7 +106,7 @@ export default function HowItWorksPage() {
               <span style={{ color: 'var(--pine)' }}>Not the bank.</span>
             </h1>
             <p className="text-body" style={{ fontSize: '1.0625rem', maxWidth: 560 }}>
-              DeedRiver converts your home equity into tokens you own and control.
+              DeedStack converts your home equity into tokens you own and control.
               No deed transfer. No debt. No broker. Four steps from appraisal to quarterly yield.
             </p>
           </div>
@@ -308,7 +308,7 @@ export default function HowItWorksPage() {
               Works with your existing mortgage
             </h2>
             <p className="text-body mb-8" style={{ fontSize: '0.9375rem', maxWidth: 520 }}>
-              DeedRiver does not require a paid-off home. Tokens represent the equity layer only —
+              DeedStack does not require a paid-off home. Tokens represent the equity layer only —
               your mortgage holder&apos;s first lien is untouched and senior in all scenarios.
               The economic sweet spot is $500,000 or more in net equity.
             </p>
@@ -369,7 +369,7 @@ export default function HowItWorksPage() {
                 marginBottom: '0.5rem',
               }}
             >
-              DeedRiver vs. HELOC
+              DeedStack vs. HELOC
             </h2>
             <p className="text-body mb-8" style={{ fontSize: '0.9375rem', maxWidth: 520 }}>
               On the same $700,000 in deployed capital — one costs you $56,000 a year,
@@ -383,7 +383,7 @@ export default function HowItWorksPage() {
               >
                 <p className="text-label"></p>
                 <p className="text-label">HELOC @ 8%</p>
-                <p className="text-label" style={{ color: 'var(--pine)' }}>DeedRiver</p>
+                <p className="text-label" style={{ color: 'var(--pine)' }}>DeedStack</p>
               </div>
               {helocRows.map((row, i) => (
                 <div
@@ -424,7 +424,7 @@ export default function HowItWorksPage() {
               className="mt-4"
               style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.75rem', color: 'var(--slate)' }}
             >
-              DeedRiver is not a debt instrument. This is not investment advice.
+              DeedStack is not a debt instrument. This is not investment advice.
               Past performance does not guarantee future results.
             </p>
           </div>
@@ -443,10 +443,10 @@ export default function HowItWorksPage() {
                 marginBottom: '0.5rem',
               }}
             >
-              DeedRiver vs. Reverse Mortgage
+              DeedStack vs. Reverse Mortgage
             </h2>
             <p className="text-body mb-8" style={{ fontSize: '0.9375rem', maxWidth: 520 }}>
-              A reverse mortgage transfers compounding risk to the homeowner. DeedRiver keeps
+              A reverse mortgage transfers compounding risk to the homeowner. DeedStack keeps
               the homeowner in control — no interest, no mandatory insurance, no lender
               deciding when you sell.
             </p>
@@ -458,7 +458,7 @@ export default function HowItWorksPage() {
               >
                 <p className="text-label"></p>
                 <p className="text-label">Reverse Mortgage</p>
-                <p className="text-label" style={{ color: 'var(--pine)' }}>DeedRiver</p>
+                <p className="text-label" style={{ color: 'var(--pine)' }}>DeedStack</p>
               </div>
               {reverseRows.map((row, i) => (
                 <div
@@ -486,7 +486,7 @@ export default function HowItWorksPage() {
               className="mt-4"
               style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.75rem', color: 'var(--slate)' }}
             >
-              DeedRiver is not a mortgage product. Tokens are not debt instruments.
+              DeedStack is not a mortgage product. Tokens are not debt instruments.
               Currently available to accredited investors in Wyoming.
             </p>
           </div>

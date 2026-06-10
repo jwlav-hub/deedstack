@@ -147,7 +147,7 @@ export default function YieldPage() {
               <span style={{ color: 'var(--pine)' }}>Earned by your equity.</span>
             </h1>
             <p className="text-body" style={{ fontSize: '1.0625rem', maxWidth: 580 }}>
-              DeedRiver partners with institutional fund managers who have spent years delivering
+              DeedStack partners with institutional fund managers who have spent years delivering
               returns previously reserved for $5M+ investors. Now your home equity can access the same vehicle.
             </p>
             <p className="text-body mt-5" style={{ fontSize: '1rem', maxWidth: 580, color: 'var(--stone)' }}>
@@ -211,7 +211,7 @@ export default function YieldPage() {
                   is what institutional investors pay $5M minimums to access.
                 </p>
                 <p className="text-body" style={{ fontSize: '0.9375rem' }}>
-                  DeedRiver brings this vehicle to homeowners. No $5M minimum. No broker.
+                  DeedStack brings this vehicle to homeowners. No $5M minimum. No broker.
                   No debt. Your equity does the work.
                 </p>
               </div>
@@ -222,7 +222,7 @@ export default function YieldPage() {
                   { label: 'Pedigree', value: 'Goldman Sachs, Deutsche Bank Asia' },
                   { label: 'Track Record', value: '8 years — S&P outperformance in 6 of 8' },
                   { label: 'Previous Access', value: '$5M+ minimum — institutional only' },
-                  { label: 'DeedRiver Access', value: 'Any qualifying homeowner' },
+                  { label: 'DeedStack Access', value: 'Any qualifying homeowner' },
                 ].map((row) => (
                   <div key={row.label} className="flex gap-4 items-start">
                     <p style={{
@@ -267,7 +267,7 @@ export default function YieldPage() {
               Eight years. Every market cycle. Still ahead.
             </h2>
             <p className="text-body mb-8" style={{ fontSize: '0.9375rem', maxWidth: 520 }}>
-              BFAM vs. S&P 500 — annual gross returns. The 12% DeedRiver target sits
+              BFAM vs. S&P 500 — annual gross returns. The 12% DeedStack target sits
               below every year on record.
             </p>
 
@@ -304,7 +304,7 @@ export default function YieldPage() {
             </div>
             <p className="mt-4" style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.75rem', color: 'var(--slate)', lineHeight: 1.6 }}>
               Past performance does not guarantee future results. BFAM figures are gross of fees.
-              DeedRiver homeowner returns are net of platform fees. S&P 500 figures are total return including dividends.
+              DeedStack homeowner returns are net of platform fees. S&P 500 figures are total return including dividends.
             </p>
           </div>
         </section>
@@ -510,7 +510,7 @@ export default function YieldPage() {
                   <p className="text-label mb-2" style={{ color: 'var(--gold)' }}>WHAT THIS REPLACES</p>
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', color: 'var(--stone)', lineHeight: 1.7 }}>
                     A HELOC at 8% on the same capital costs you that yield in interest every year —
-                    and you still carry the debt. DeedRiver pays you instead, with no personal liability.
+                    and you still carry the debt. DeedStack pays you instead, with no personal liability.
                   </p>
                 </div>
               </div>

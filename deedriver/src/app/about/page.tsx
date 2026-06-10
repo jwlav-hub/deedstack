@@ -17,14 +17,14 @@ const values = [
   },
   {
     title: 'Wyoming-rooted. Principled by design.',
-    body: 'We incorporated in Wyoming because the law here is clear, fair, and built for this. Not because it was convenient. The structure of DeedRiver reflects that same directness — no workarounds, no gray areas.',
+    body: 'We incorporated in Wyoming because the law here is clear, fair, and built for this. Not because it was convenient. The structure of DeedStack reflects that same directness — no workarounds, no gray areas.',
   },
 ];
 
 const principles = [
   {
     label: 'Anti-Corporate Housing',
-    body: 'Corporate ownership of single-family homes has extracted wealth from neighborhoods for decades. DeedRiver does not facilitate institutional takeover of residential property. Homeowners keep the deed. Full stop.',
+    body: 'Corporate ownership of single-family homes has extracted wealth from neighborhoods for decades. DeedStack does not facilitate institutional takeover of residential property. Homeowners keep the deed. Full stop.',
   },
   {
     label: 'Accredited Investor First',
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <span style={{ color: 'var(--pine)' }}>Your equity. Your terms.</span>
             </h1>
             <p className="text-body" style={{ fontSize: '1.0625rem', maxWidth: 560 }}>
-              DeedRiver exists because homeowners deserve access to institutional-grade
+              DeedStack exists because homeowners deserve access to institutional-grade
               returns on equity they already own — without giving up their deed, taking
               on debt, or paying a broker to do it.
             </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 <p className="text-body" style={{ fontSize: '0.9375rem' }}>
                   Banks use your equity as collateral to generate returns they keep.
                   Reverse mortgage lenders profit from compounding interest on what
-                  you built. DeedRiver redirects that return to you.
+                  you built. DeedStack redirects that return to you.
                 </p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 The Wyoming identity is not branding. It reflects a plainspoken approach
                 to building — no unnecessary complexity, no financial engineering for its
                 own sake, no hiding fees in the fine print. That ethos runs through
-                every part of how DeedRiver is built.
+                every part of how DeedStack is built.
               </p>
             </div>
             <div className="mt-8">
