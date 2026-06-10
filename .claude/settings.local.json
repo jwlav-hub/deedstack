@@ -3,7 +3,24 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git rm *)",
-      "Bash(rm -rf /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/.git)"
+      "Bash(rm -rf /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/.git)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(xargs sed -i '' 's/DeedRiver/DeedStack/g')",
+      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack add deedriver/src)",
+      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack commit -m ' *)",
+      "Bash(grep -rn \"DeedStack\" /Users/josephlaviolette/Documents/_Websites/DeedRiver/deedriver/src --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.css\" --include=\"*.mjs\" 2>/dev/null)",
+      "Bash(find /Users/josephlaviolette/Documents/_Websites -name \"page.tsx\" -path \"*/app/page.tsx\" | grep -v node_modules | grep -v .next)",
+      "Bash(find /Users/josephlaviolette -name \"page.tsx\" -path \"*/app/page.tsx\" 2>/dev/null | grep -v node_modules | grep -v .next | grep -v Library)",
+      "Bash(rsync -av --delete /Users/josephlaviolette/Documents/Websites/DeedRiver/src/ /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/src/)",
+      "Bash(rsync -av --delete /Users/josephlaviolette/Documents/Websites/DeedRiver/public/ /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/public/)",
+      "Bash(cp /Users/josephlaviolette/Documents/Websites/DeedRiver/package.json /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/package.json)",
+      "Bash(cp /Users/josephlaviolette/Documents/Websites/DeedRiver/package-lock.json /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/package-lock.json)",
+      "Bash(cp /Users/josephlaviolette/Documents/Websites/DeedRiver/next.config.mjs /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/next.config.mjs)",
+      "Bash(npm install *)",
+      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack add -A)",
+      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack status --short)"
     ]
   }
 }

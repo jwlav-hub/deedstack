@@ -1,231 +1,247 @@
+import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 import MountainSVG from '@/components/MountainSVG';
 import Link from 'next/link';
 
-const useCases = [
+export const metadata: Metadata = {
+  title: 'DeedStack — Real Estate Tokenization Platform',
+  description: 'DeedStack is a three-layer real estate tokenization platform: tokenize properties into DEED tokens, access institutional-grade yield, and participate in compliant secondary transfer. Wyoming-incorporated. Accredited investors only.',
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
+const ecosystem = [
   {
-    badge: 'YIELD GENERATION',
-    badgeClass: 'badge-yield',
-    title: 'Earn While You Stay',
-    body:
-      'Pledge your equity tokens to the fund. Earn 18–25% APY on your home equity — no debt, no monthly payments, no deed transfer. Your home, your terms.',
-    stat: '~12%',
-    statLabel: 'Target APY',
-    statClass: 'stat-value-yield',
-    cta: 'See How Yield Works',
-    href: '/yield',
-    accent: 'border-t-[var(--gold)]',
+    layer: '01',
+    icon: '⬡',
+    title: 'Tokenization Platform',
+    subtitle: 'Asset Layer',
+    color: 'var(--pine)',
+    colorLight: 'rgba(40,90,68,0.15)',
+    points: [
+      'Property digitization & DEED token minting',
+      'Smart contract issuance and escrow',
+      'Multi-jurisdiction regulatory compliance',
+      'Fractional ownership structure',
+      'Deed-retained, non-recourse pledge design',
+    ],
   },
   {
-    badge: 'REVERSE MORTGAGE REPLACEMENT',
-    badgeClass: 'badge-active',
-    title: 'Access Equity on Your Schedule',
-    body:
-      'Sell tokens individually, on your timeline. No bank approval. No forced move-out. No compounding interest eating your estate. Keep the deed, access the value.',
-    stat: '0%',
-    statLabel: 'Interest Rate',
-    statClass: 'stat-value',
-    cta: 'Compare to Reverse Mortgages',
-    href: '/how-it-works',
-    accent: 'border-t-[var(--pine)]',
+    layer: '02',
+    icon: '◎',
+    title: 'AI Intelligence Layer',
+    subtitle: 'Intelligence Layer',
+    color: '#52B788',
+    colorLight: 'rgba(82,183,136,0.12)',
+    points: [
+      'Agentic deal sourcing & property matching',
+      'Automated KYC / AML verification',
+      'Investor risk profiling & scoring',
+      'ML-based portfolio optimization',
+      'Predictive valuation & lead scoring',
+    ],
   },
   {
-    badge: 'P2P MARKETPLACE',
-    badgeClass: 'badge-tokenized',
-    title: 'Buy and Sell Without Brokers',
-    body:
-      'Trade fractional equity tokens peer-to-peer. No 5–6% commission. No listing delays. Verified ownership on-chain, settled fast, fees a fraction of traditional sales.',
-    stat: '<1%',
-    statLabel: 'Platform Fee',
-    statClass: 'stat-value',
-    cta: 'Explore the Marketplace',
-    href: '/how-it-works',
-    accent: 'border-t-[var(--timber)]',
+    layer: '03',
+    icon: '◈',
+    title: 'DEX Marketplace',
+    subtitle: 'Liquidity Layer',
+    color: 'var(--gold)',
+    colorLight: 'rgba(176,138,38,0.12)',
+    points: [
+      'Secondary token trading on-chain',
+      'Real-time price discovery',
+      'Designed for compliant secondary transfer — subject to securities restrictions and eligibility checks',
+      'Decentralized, permissioned exchange',
+      'Sub-1.5% platform fee structure',
+    ],
   },
 ];
 
-const steps = [
+const products = [
   {
-    num: '01',
-    title: 'Tokenize Your Equity',
-    body: 'We appraise your home and mint ERC-1400 security tokens representing your equity. Your deed never moves.',
+    tag: 'FOR HOMEOWNERS',
+    tagColor: 'var(--pine)',
+    tagBg: 'rgba(40,90,68,0.12)',
+    title: 'Yield Deed',
+    desc: 'Tokenize your residential equity and earn an 8% target annual yield — while staying in your home and retaining your deed. A non-recourse pledge structure designed as an alternative to HELOCs, reverse mortgages, and home equity investment agreements.',
+    stats: [['8%', 'Target APY'], ['$0', 'Broker Fees'], ['100%', 'Deed Retained']],
+    cta: 'Explore Yield Deed',
+    href: '/yield-deed',
+    accentColor: 'var(--pine)',
   },
   {
-    num: '02',
-    title: 'Choose Your Path',
-    body: 'Pledge tokens to the fund for yield, list them on the marketplace, or hold. You decide — any time.',
-  },
-  {
-    num: '03',
-    title: 'Earn or Transact',
-    body: 'Yield compounds monthly. Marketplace sales settle in days, not months. Tokens redeem against the deed when you\'re ready.',
+    tag: 'FOR INVESTORS',
+    tagColor: 'var(--gold)',
+    tagBg: 'rgba(176,138,38,0.12)',
+    title: 'Marketplace',
+    desc: 'Buy fractional DEED tokens in Wyoming income-producing properties. Access institutional-grade real estate from $100. No $1M minimums. Designed for compliant secondary transfer, subject to securities restrictions, eligibility checks, and available marketplace liquidity.',
+    stats: [['$100', 'Min. Investment'], ['6–8%', 'Rental Yield'], ['<1.5%', 'Platform Fee']],
+    cta: 'Browse Listings',
+    href: '/marketplace',
+    accentColor: 'var(--gold)',
   },
 ];
 
-export default function HomePage() {
+const problems = [
+  { stat: '93%', label: 'of institutional-grade real estate remains inaccessible to retail investors' },
+  { stat: '$1M+', label: 'typical minimum investment for direct real estate participation' },
+  { stat: '7–10 yr', label: 'average capital lockup in traditional real estate funds' },
+  { stat: '18–24 mo', label: 'traditional capital formation cycles for property developers' },
+];
+
+const platformStats = [
+  { value: '6',      label: 'Properties Tokenized' },
+  { value: '$7.1M',  label: 'Total Value on Platform' },
+  { value: '711K',   label: 'DEED Tokens Issued' },
+  { value: '$100',   label: 'Minimum Investment' },
+];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default function PlatformPage() {
   return (
     <>
       <Nav />
+      <main style={{ background: 'var(--obsidian)' }}>
 
-      <main style={{ background: 'var(--snow)' }}>
+        {/* ── Hero ──────────────────────────────────────────────────────────── */}
+        <section style={{ background: 'var(--obsidian)', paddingTop: 128, paddingBottom: 80 }} className="px-6 md:px-12 lg:px-20 relative overflow-hidden">
+          {/* Background grid */}
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)', backgroundSize: '60px 60px', pointerEvents: 'none' }} />
+          <MountainSVG variant="dark" />
 
-        {/* Hero */}
-        <section
-          className="relative overflow-hidden pt-[120px] pb-[100px] px-6 md:px-12 lg:px-20"
-          style={{ background: 'var(--snow)' }}
-        >
-          <div className="max-w-4xl mx-auto relative z-10">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-8">
-              <span className="badge-active">WYOMING-INCORPORATED</span>
-              <span className="badge-yield">REG D 506(c)</span>
+          <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <div className="flex flex-wrap items-center gap-3 mb-8">
+              <span style={{ background: 'rgba(82,183,136,0.15)', color: '#52B788', borderRadius: 'var(--r-pill)', padding: '4px 12px', fontSize: '0.7rem', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, letterSpacing: '0.08em' }}>WYOMING-INCORPORATED</span>
+              <span style={{ background: 'rgba(176,138,38,0.15)', color: 'var(--gold-lt)', borderRadius: 'var(--r-pill)', padding: '4px 12px', fontSize: '0.7rem', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, letterSpacing: '0.08em' }}>REG D 506(c)</span>
+              <span style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.5)', borderRadius: 'var(--r-pill)', padding: '4px 12px', fontSize: '0.7rem', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, letterSpacing: '0.08em' }}>PILOT PHASE</span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-display mb-6">
-              Your equity.
-              <br />
-              <span style={{ color: 'var(--pine)' }}>Your yield.</span>
-              <br />
-              Your deed.
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 700, color: 'var(--white)', lineHeight: 1.05, letterSpacing: '-0.025em', marginBottom: 24 }}>
+              Real estate.<br />
+              <span style={{ color: '#52B788' }}>Tokenized.</span><br />
+              Accessible.
             </h1>
 
-            {/* Sub-copy */}
-            <p
-              className="text-body max-w-xl mb-10"
-              style={{ fontSize: '1.125rem', lineHeight: 1.7, color: 'var(--stone)' }}
-            >
-              DeedStack lets homeowners tokenize their residential equity and earn
-              institutional-grade returns — without giving up the deed, taking on
-              debt, or paying a broker.
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.1rem', color: 'rgba(255,255,255,0.58)', lineHeight: 1.75, maxWidth: 580, marginBottom: 40 }}>
+              DeedStack is a three-layer tokenization platform that converts income-producing real estate into DEED tokens — enabling fractional ownership, institutional yield, and compliant secondary transfer for verified accredited participants.
             </p>
 
-            {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-16">
-              <Link href="/calculator" className="btn-primary" style={{ padding: '13px 28px', fontSize: 15 }}>
-                Calculate Your Yield
+              <Link href="/marketplace" style={{ background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', transition: 'background 200ms' }} className="hover:!bg-[#3A7A5C]">
+                Browse Marketplace →
               </Link>
-              <Link
-                href="/how-it-works"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '13px 28px',
-                  fontSize: 15,
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 500,
-                  color: 'var(--granite)',
-                  textDecoration: 'none',
-                  border: '1.5px solid var(--mist)',
-                  borderRadius: 'var(--r-md)',
-                  transition: 'border-color var(--t-base)',
-                }}
-                className="hover:!border-[var(--pine-pale)]"
-              >
-                How It Works
+              <Link href="/yield-deed" style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.15)', transition: 'border-color 200ms, color 200ms' }} className="hover:!border-[rgba(255,255,255,0.4)] hover:!text-white">
+                Yield Deed
               </Link>
             </div>
 
-            {/* Stat strip */}
+            {/* Platform stats */}
             <div className="flex flex-wrap gap-6">
-              {[
-                { value: '~12%', label: 'Target APY', className: 'stat-value-yield' },
-                { value: '5 Yrs', label: 'Fund Track Record', className: 'stat-value' },
-                { value: '$0', label: 'Broker Fees', className: 'stat-value' },
-                { value: '100%', label: 'Deed Retained', className: 'stat-value' },
-              ].map((s) => (
-                <div key={s.label} className="stat-card" style={{ minWidth: 110 }}>
-                  <div className={s.className}
-                    style={{ fontFamily: "'DM Mono', monospace" }}
-                  >
-                    {s.value}
-                  </div>
-                  <div className="stat-label">{s.label}</div>
+              {platformStats.map((s) => (
+                <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--r-md)', padding: '16px 20px', minWidth: 130 }}>
+                  <p style={{ fontFamily: "'DM Mono', monospace", fontSize: '1.5rem', fontWeight: 600, color: '#52B788', lineHeight: 1 }}>{s.value}</p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', color: 'rgba(255,255,255,0.4)', marginTop: 4, letterSpacing: '0.02em' }}>{s.label}</p>
                 </div>
               ))}
             </div>
           </div>
-
-          <MountainSVG variant="light" />
         </section>
 
-        {/* Use-case cards */}
-        <section
-          className="py-20 px-6 md:px-12 lg:px-20"
-          style={{ background: 'var(--frost)' }}
-        >
-          <div className="max-w-6xl mx-auto">
-            <div className="mb-12 text-center">
-              <p className="text-label mb-3">THREE WAYS TO USE DEEDRIVER</p>
-              <h2 className="text-h1" style={{ color: 'var(--granite)' }}>
-                Your equity, put to work
+        {/* ── The Problem ───────────────────────────────────────────────────── */}
+        <section style={{ background: 'var(--granite)', borderTop: '1px solid rgba(255,255,255,0.06)' }} className="px-6 md:px-12 lg:px-20 py-20">
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>THE PROBLEM</p>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 600, color: 'var(--white)', marginBottom: 12, lineHeight: 1.2 }}>
+              Institutional real estate has been a closed market.
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, maxWidth: 560, marginBottom: 40 }}>
+              93% of institutional-grade real estate remains inaccessible to retail investors — locked behind $1M+ minimums, 7–10 year illiquidity windows, and 6–12 month settlement cycles. Property developers face 18–24 month capital formation timelines targeting only UHNW buyers. DeedStack changes that.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {problems.map((p) => (
+                <div key={p.stat} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 'var(--r-lg)', padding: '20px 18px' }}>
+                  <p style={{ fontFamily: "'DM Mono', monospace", fontSize: '1.6rem', fontWeight: 600, color: '#52B788', marginBottom: 8 }}>{p.stat}</p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>{p.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Three-Layer Ecosystem ─────────────────────────────────────────── */}
+        <section style={{ background: 'var(--obsidian)', borderTop: '1px solid rgba(255,255,255,0.06)' }} className="px-6 md:px-12 lg:px-20 py-24 relative overflow-hidden">
+          <MountainSVG variant="dark" />
+          <div style={{ maxWidth: 960, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <div style={{ textAlign: 'center', marginBottom: 56 }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>THE ECOSYSTEM</p>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.6rem, 3vw, 2.25rem)', fontWeight: 600, color: 'var(--white)', lineHeight: 1.2 }}>
+                Three integrated layers.<br />One unified platform.
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {useCases.map((uc) => (
-                <div
-                  key={uc.badge}
-                  className="card flex flex-col"
-                  style={{
-                    borderTop: `3px solid ${
-                      uc.badgeClass === 'badge-yield'
-                        ? 'var(--gold)'
-                        : uc.badgeClass === 'badge-active'
-                        ? 'var(--pine)'
-                        : 'var(--timber)'
-                    }`,
-                  }}
-                >
-                  <span className={`${uc.badgeClass} self-start mb-4`}>{uc.badge}</span>
-
-                  <h3
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontSize: '1.3rem',
-                      fontWeight: 600,
-                      color: 'var(--granite)',
-                      marginBottom: '0.75rem',
-                      lineHeight: 1.25,
-                    }}
-                  >
-                    {uc.title}
-                  </h3>
-
-                  <p className="text-body mb-6 flex-1" style={{ fontSize: '0.9375rem' }}>
-                    {uc.body}
-                  </p>
-
-                  <div className="stat-card mb-6 flex items-end gap-3">
-                    <div className={uc.statClass}
-                      style={{ fontFamily: "'DM Mono', monospace" }}
-                    >
-                      {uc.stat}
-                    </div>
-                    <div className="stat-label pb-1">{uc.statLabel}</div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {ecosystem.map((e) => (
+                <div key={e.layer} style={{ background: e.colorLight, border: `1px solid ${e.color}30`, borderRadius: 'var(--r-xl)', padding: '28px 24px', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                    <span style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.65rem', color: e.color, letterSpacing: '0.1em', opacity: 0.7 }}>{e.layer}</span>
+                    <div style={{ flex: 1, height: 1, background: `${e.color}20` }} />
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.08em' }}>{e.subtitle.toUpperCase()}</span>
                   </div>
+                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', fontWeight: 600, color: 'var(--white)', marginBottom: 16 }}>{e.title}</h3>
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 'auto' }}>
+                    {e.points.map((pt) => (
+                      <li key={pt} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                        <span style={{ color: e.color, fontSize: '0.75rem', marginTop: 3, flexShrink: 0 }}>▸</span>
+                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.5 }}>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
-                  <Link
-                    href={uc.href}
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 13,
-                      fontWeight: 500,
-                      color: 'var(--pine)',
-                      textDecoration: 'none',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 6,
-                    }}
-                    className="hover:!text-[var(--pine-lt)] group"
-                  >
-                    {uc.cta}
-                    <span
-                      style={{ transition: 'transform var(--t-base)' }}
-                      className="group-hover:translate-x-0.5"
-                    >
-                      →
-                    </span>
+            {/* Connector line visual */}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0, margin: '36px 0 0', opacity: 0.35 }}>
+              <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4))' }} />
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.4)' }} />
+              <div style={{ height: 1, width: 160, background: 'rgba(255,255,255,0.2)' }} />
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(255,255,255,0.4)' }} />
+              <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, rgba(255,255,255,0.4), transparent)' }} />
+            </div>
+            <p style={{ textAlign: 'center', fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', color: 'rgba(255,255,255,0.25)', marginTop: 10, letterSpacing: '0.05em' }}>
+              AI INTELLIGENCE LAYER CONNECTS ALL THREE
+            </p>
+          </div>
+        </section>
+
+        {/* ── Two Products ─────────────────────────────────────────────────── */}
+        <section style={{ background: 'var(--granite)', borderTop: '1px solid rgba(255,255,255,0.06)' }} className="px-6 md:px-12 lg:px-20 py-24">
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <div style={{ marginBottom: 48 }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>TWO PRODUCTS. ONE PLATFORM.</p>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 600, color: 'var(--white)', lineHeight: 1.2 }}>
+                Whether you own property or want to invest in it.
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {products.map((p) => (
+                <div key={p.title} style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${p.accentColor}25`, borderRadius: 'var(--r-xl)', padding: '32px 28px', display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ background: p.tagBg, color: p.tagColor, borderRadius: 'var(--r-pill)', padding: '3px 10px', fontSize: '0.68rem', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, letterSpacing: '0.06em', display: 'inline-block', marginBottom: 16, alignSelf: 'flex-start' }}>{p.tag}</span>
+                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 600, color: 'var(--white)', marginBottom: 14 }}>{p.title}</h3>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 24, flex: 1 }}>{p.desc}</p>
+                  <div className="flex gap-4 mb-24px" style={{ marginBottom: 24 }}>
+                    {p.stats.map(([val, lbl]) => (
+                      <div key={lbl} style={{ flex: 1 }}>
+                        <p style={{ fontFamily: "'DM Mono', monospace", fontSize: '1.2rem', fontWeight: 600, color: p.accentColor }}>{val}</p>
+                        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.68rem', color: 'rgba(255,255,255,0.35)', marginTop: 2 }}>{lbl}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href={p.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', fontWeight: 500, color: p.accentColor, textDecoration: 'none' }}>
+                    {p.cta} →
                   </Link>
                 </div>
               ))}
@@ -233,234 +249,60 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* How It Works */}
-        <section
-          className="relative overflow-hidden py-24 px-6 md:px-12 lg:px-20"
-          style={{ background: 'var(--snow)' }}
-        >
-          <div className="max-w-4xl mx-auto relative z-10">
-            <p className="text-label mb-3">THE PROCESS</p>
-            <h2 className="text-h1 mb-14" style={{ color: 'var(--granite)' }}>
-              Three steps to tokenized equity
-            </h2>
-
-            <div className="flex flex-col gap-10">
-              {steps.map((step, i) => (
-                <div key={step.num} className="flex gap-8 items-start">
-                  <div
-                    style={{
-                      fontFamily: "'DM Mono', monospace",
-                      fontSize: '2.5rem',
-                      fontWeight: 500,
-                      color: 'var(--mist)',
-                      lineHeight: 1,
-                      minWidth: 60,
-                      userSelect: 'none',
-                    }}
-                  >
-                    {step.num}
-                  </div>
-                  <div>
-                    <h3
-                      style={{
-                        fontFamily: "'Playfair Display', serif",
-                        fontSize: '1.2rem',
-                        fontWeight: 600,
-                        color: 'var(--granite)',
-                        marginBottom: '0.5rem',
-                      }}
-                    >
-                      {step.title}
-                    </h3>
-                    <p className="text-body" style={{ fontSize: '0.9375rem' }}>
-                      {step.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-14">
-              <Link href="/how-it-works" className="btn-primary">
-                Full Explainer →
-              </Link>
-            </div>
-          </div>
-
-          <MountainSVG variant="light" />
-        </section>
-
-        {/* Trust bar */}
-        <section
-          style={{ background: 'var(--obsidian)' }}
-          className="relative overflow-hidden py-20 px-6 md:px-12 lg:px-20"
-        >
-          <div className="max-w-5xl mx-auto relative z-10 text-center">
-            <p className="text-label mb-4" style={{ color: 'var(--slate)' }}>
-              BUILT IN WYOMING. BUILT FOR HOMEOWNERS.
-            </p>
-            <h2
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-                fontWeight: 600,
-                color: 'var(--white)',
-                marginBottom: '1.25rem',
-                letterSpacing: '-0.01em',
-                lineHeight: 1.2,
-              }}
-            >
-              The deed stays in your name.
-              <br />
-              The yield comes to you.
-            </h2>
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '1.0625rem',
-                lineHeight: 1.75,
-                color: 'var(--slate)',
-                maxWidth: 560,
-                margin: '0 auto 2.5rem',
-              }}
-            >
-              Wyoming law gives homeowners the strongest token rights in the nation.
-              Reg D 506(c) keeps us compliant. A verified 5-year fund track record
-              backs every yield projection.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/calculator" className="btn-primary" style={{ padding: '13px 28px', fontSize: 15 }}>
-                Calculate Your Yield
-              </Link>
-              <Link
-                href="/regulation"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '13px 28px',
-                  fontSize: 15,
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 500,
-                  color: 'var(--slate)',
-                  textDecoration: 'none',
-                  border: '1.5px solid rgba(255,255,255,0.12)',
-                  borderRadius: 'var(--r-md)',
-                  transition: 'border-color var(--t-base)',
-                }}
-                className="hover:!border-[rgba(255,255,255,0.3)] hover:!text-white"
-              >
-                Wyoming Advantage
-              </Link>
-            </div>
-          </div>
-
-          <MountainSVG variant="dark" />
-        </section>
-
-        {/* Footer */}
-        <footer
-          style={{
-            background: 'var(--obsidian)',
-            borderTop: '1px solid rgba(255,255,255,0.06)',
-          }}
-          className="py-12 px-6 md:px-12 lg:px-20"
-        >
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+        {/* ── Wyoming Advantage bar ─────────────────────────────────────────── */}
+        <section style={{ background: 'rgba(40,90,68,0.15)', borderTop: '1px solid rgba(40,90,68,0.3)', borderBottom: '1px solid rgba(40,90,68,0.3)' }} className="px-6 md:px-12 lg:px-20 py-14">
+          <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
             <div>
-              <div className="flex items-center mb-3">
-                <span
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 700,
-                    fontSize: '1.1rem',
-                    color: 'var(--white)',
-                  }}
-                >
-                  Deed
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 700,
-                    fontSize: '1.1rem',
-                    color: 'var(--pine-lt)',
-                  }}
-                >
-                  River
-                </span>
-              </div>
-              <p
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  color: 'var(--slate)',
-                  maxWidth: 260,
-                  lineHeight: 1.65,
-                }}
-              >
-                Homeowner-controlled equity tokenization. Wyoming-incorporated.
-                Reg D 506(c).
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', letterSpacing: '0.1em', color: 'rgba(82,183,136,0.7)', marginBottom: 8 }}>REGULATORY FOUNDATION</p>
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.35rem', fontWeight: 600, color: 'var(--white)', marginBottom: 8 }}>
+                Built on Wyoming&apos;s digital asset statutes.
+              </h3>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.65, maxWidth: 460 }}>
+                Wyoming offers the strongest token property rights in the United States — DAO LLC structure, blockchain-native digital asset laws, and a regulatory environment purpose-built for tokenized real estate.
               </p>
             </div>
-
-            <div className="flex flex-wrap gap-12">
+            <div className="flex flex-col gap-3">
               {[
-                {
-                  heading: 'Platform',
-                  links: [
-                    { href: '/how-it-works', label: 'How It Works' },
-                    { href: '/yield', label: 'Yield' },
-                    { href: '/calculator', label: 'Calculator' },
-                    { href: '/dashboard', label: 'Dashboard' },
-                  ],
-                },
-                {
-                  heading: 'Company',
-                  links: [
-                    { href: '/about', label: 'About' },
-                    { href: '/regulation', label: 'Regulation' },
-                  ],
-                },
-              ].map((col) => (
-                <div key={col.heading}>
-                  <p className="text-label mb-4" style={{ color: 'var(--slate)' }}>
-                    {col.heading}
-                  </p>
-                  <div className="flex flex-col gap-2">
-                    {col.links.map((l) => (
-                      <Link
-                        key={l.href}
-                        href={l.href}
-                        style={{
-                          fontFamily: "'DM Sans', sans-serif",
-                          fontSize: 13,
-                          color: 'var(--slate)',
-                          textDecoration: 'none',
-                        }}
-                        className="hover:!text-white"
-                      >
-                        {l.label}
-                      </Link>
-                    ))}
-                  </div>
+                'Wyoming Digital Asset Statutes',
+                'DAO LLC Entity Framework',
+                'Reg D 506(c) Compliance',
+                'Qualified Custody Solutions',
+              ].map((item) => (
+                <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ color: '#52B788', fontSize: '0.8rem' }}>✓</span>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.83rem', color: 'rgba(255,255,255,0.6)' }}>{item}</span>
                 </div>
               ))}
+              <Link href="/regulation" style={{ marginTop: 4, fontFamily: "'DM Sans', sans-serif", fontSize: '0.8rem', color: '#52B788', textDecoration: 'none' }}>
+                Wyoming regulatory framework →
+              </Link>
             </div>
           </div>
+        </section>
 
-          <div
-            className="max-w-6xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between gap-3"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
-          >
-            <p style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: 'var(--slate)' }}>
-              © 2026 DeedStack. Wyoming-incorporated.
+        {/* ── Final CTA ─────────────────────────────────────────────────────── */}
+        <section style={{ background: 'var(--obsidian)' }} className="px-6 md:px-12 lg:px-20 py-20 text-center relative overflow-hidden">
+          <MountainSVG variant="dark" />
+          <div style={{ maxWidth: 540, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.6rem, 3vw, 2.25rem)', fontWeight: 600, color: 'var(--white)', marginBottom: 16, lineHeight: 1.2 }}>
+              Ready to participate?
+            </h2>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, marginBottom: 32 }}>
+              Join our waitlist for the Wyoming pilot and receive your free Home Equity Opportunity Report. No commitment. No credit card required.
             </p>
-            <p style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: 'var(--slate)', maxWidth: 480 }}>
-              Securities offered under Reg D 506(c). For accredited investors only.
-              Not financial advice. Past fund performance does not guarantee future results.
-            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/interest-list" style={{ background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }} className="hover:!bg-[#3A7A5C]">
+                Join the Waitlist →
+              </Link>
+              <Link href="/marketplace" style={{ background: 'transparent', color: 'rgba(255,255,255,0.65)', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.15)' }} className="hover:!text-white hover:!border-[rgba(255,255,255,0.35)]">
+                Browse Marketplace
+              </Link>
+            </div>
           </div>
-        </footer>
+        </section>
+
+        {/* ── Footer ────────────────────────────────────────────────────────── */}
+        <Footer />
 
       </main>
     </>
