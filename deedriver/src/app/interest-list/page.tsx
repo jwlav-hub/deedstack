@@ -376,7 +376,7 @@ function Report({ form, scenario }: { form: FormData; scenario: Scenario }) {
       <div style={{ background: 'var(--obsidian)', borderRadius: 'var(--r-xl)', padding: '24px 28px', textAlign: 'center', marginBottom: 18 }}>
         <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontWeight: 600, color: '#fff', marginBottom: 8 }}>{r.score >= 60 ? `${firstName}, you look like a strong candidate.` : `${firstName}, you're on our radar.`}</p>
         <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.65, maxWidth: 440, margin: '0 auto 18px' }}>{r.drActive ? 'Your state qualifies for the Wyoming pilot. We\'ll be in touch to discuss accredited verification and pilot terms.' : r.drWaitlist ? 'You\'re on our priority waitlist. We\'ll contact you when your state track opens.' : 'We\'ll notify you when DeedStack expands to your state.'}</p>
-        <Link href="/pilot" style={{ display: 'inline-block', background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-sm)', padding: '11px 24px', fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none' }}>Learn About the Two-Track Strategy →</Link>
+        <Link href="/marketplace" style={{ display: 'inline-block', background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-sm)', padding: '11px 24px', fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none' }}>Learn About the Two-Track Strategy →</Link>
       </div>
 
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.68rem', color: 'var(--slate)', lineHeight: 1.75, textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>This report is for informational and educational purposes only. All figures are illustrative estimates based on self-reported inputs. Nothing here constitutes financial, legal, or investment advice. DeedStack is not a registered broker-dealer or investment adviser. Pilot participation is subject to regulatory approval, accredited investor verification, and legal review of transaction documents.</p>
@@ -622,7 +622,7 @@ export default function InterestListPage() {
                 <div style={{ fontSize: '2.5rem', marginBottom: 16 }}>✓</div>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', fontWeight: 600, color: '#fff', marginBottom: 12 }}>You&apos;re on the list, {form.name.split(' ')[0]}.</h2>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, marginBottom: 24 }}>We&apos;ll reach out with state-relevant updates when your track opens. No spam.</p>
-                <Link href="/pilot" style={{ display: 'inline-block', background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-sm)', padding: '11px 24px', fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none' }}>Learn About the Two-Track Strategy →</Link>
+                <Link href="/marketplace" style={{ display: 'inline-block', background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-sm)', padding: '11px 24px', fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none' }}>Learn About the Two-Track Strategy →</Link>
               </div>
             </section>
             <UpdatesSection state={form.state} />

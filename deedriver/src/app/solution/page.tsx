@@ -80,7 +80,7 @@ export default function SolutionPage() {
                   DeedStack connects homeowners who want to unlock equity with investors who want institutional real estate returns — without brokers, without $1M minimums. The AI layer handles verification, valuation, and token issuance between both sides. Secondary transfer is designed for compliance, not guaranteed liquidity.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/yield-deed" style={{ background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-md)', padding: '12px 24px', fontSize: 14, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }} className="hover:!bg-[#3A7A5C]">
+                  <Link href="/how-it-works" style={{ background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-md)', padding: '12px 24px', fontSize: 14, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }} className="hover:!bg-[#3A7A5C]">
                     I&apos;m a Homeowner →
                   </Link>
                   <Link href="/marketplace" style={{ background: 'rgba(212,167,80,0.12)', color: 'var(--gold-lt)', borderRadius: 'var(--r-md)', padding: '12px 24px', fontSize: 14, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1px solid rgba(212,167,80,0.25)' }} className="hover:!bg-[rgba(212,167,80,0.2)]">
@@ -166,7 +166,7 @@ export default function SolutionPage() {
                   ))}
                 </div>
                 <div className="px-7 py-5" style={{ borderTop: '1px solid rgba(40,90,68,0.3)' }}>
-                  <Link href="/yield-deed" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.82rem', fontWeight: 500, color: '#52B788', textDecoration: 'none' }}>
+                  <Link href="/how-it-works" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.82rem', fontWeight: 500, color: '#52B788', textDecoration: 'none' }}>
                     Explore Yield Deed →
                   </Link>
                 </div>

@@ -20,7 +20,9 @@
       "Bash(cp /Users/josephlaviolette/Documents/Websites/DeedRiver/next.config.mjs /Users/josephlaviolette/Documents/_Websites/DeedStack/deedriver/next.config.mjs)",
       "Bash(npm install *)",
       "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack add -A)",
-      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack status --short)"
+      "Bash(git -C /Users/josephlaviolette/Documents/_Websites/DeedStack status --short)",
+      "Bash(npm run *)",
+      "Bash(convert --version)"
     ]
   }
 }

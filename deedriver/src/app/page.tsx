@@ -68,7 +68,7 @@ const products = [
     desc: 'Tokenize your residential equity and earn an 8% target annual yield — while staying in your home and retaining your deed. A non-recourse pledge structure designed as an alternative to HELOCs, reverse mortgages, and home equity investment agreements.',
     stats: [['8%', 'Target APY'], ['$0', 'Broker Fees'], ['100%', 'Deed Retained']],
     cta: 'Explore Yield Deed',
-    href: '/yield-deed',
+    href: '/how-it-works',
     accentColor: 'var(--pine)',
   },
   {
@@ -133,7 +133,7 @@ export default function PlatformPage() {
               <Link href="/marketplace" style={{ background: 'var(--pine)', color: '#fff', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', transition: 'background 200ms' }} className="hover:!bg-[#3A7A5C]">
                 Browse Marketplace →
               </Link>
-              <Link href="/yield-deed" style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.15)', transition: 'border-color 200ms, color 200ms' }} className="hover:!border-[rgba(255,255,255,0.4)] hover:!text-white">
+              <Link href="/how-it-works" style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.15)', transition: 'border-color 200ms, color 200ms' }} className="hover:!border-[rgba(255,255,255,0.4)] hover:!text-white">
                 Yield Deed
               </Link>
             </div>

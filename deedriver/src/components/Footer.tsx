@@ -5,17 +5,23 @@ const footerCols = [
     heading: 'Platform',
     links: [
       { href: '/how-it-works', label: 'How It Works' },
-      { href: '/yield-deed',   label: 'Yield Deed' },
-      { href: '/simulations',  label: 'Simulations' },
       { href: '/marketplace',  label: 'Marketplace' },
-      { href: '/faq',          label: 'FAQ' },
+      { href: '/simulations',  label: 'Simulations' },
+    ],
+  },
+  {
+    heading: 'Concepts',
+    links: [
+      { href: '/yield-deed',  label: 'Yield Deed' },
+      { href: '/deed-shield', label: 'DeedShield' },
+      { href: '/pilot',       label: 'Pilot' },
+      { href: '/faq',         label: 'FAQ' },
     ],
   },
   {
     heading: 'Company',
     links: [
-      { href: '/pilot',      label: 'Pilot' },
-      { href: '/investors',  label: 'Data Room' },
+      { href: '/investors',     label: 'Data Room' },
       { href: '/interest-list', label: 'Join Waitlist' },
     ],
   },
