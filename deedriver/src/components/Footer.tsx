@@ -3,6 +3,7 @@ import Link from 'next/link';
 const footerCols = [
   {
     heading: 'Platform',
+    headingColor: 'var(--slate)',
     links: [
       { href: '/how-it-works', label: 'How It Works' },
       { href: '/marketplace',  label: 'Marketplace' },
@@ -11,6 +12,7 @@ const footerCols = [
   },
   {
     heading: 'Concepts',
+    headingColor: 'var(--slate)',
     links: [
       { href: '/yield-deed',  label: 'Yield Deed' },
       { href: '/deed-shield', label: 'DeedShield' },
@@ -19,9 +21,17 @@ const footerCols = [
     ],
   },
   {
-    heading: 'Company',
+    heading: 'Investors',
+    headingColor: 'var(--gold)',
     links: [
-      { href: '/investors',     label: 'Data Room' },
+      { href: '/about',     label: 'About & Partners' },
+      { href: '/investors', label: 'Data Room' },
+    ],
+  },
+  {
+    heading: 'Company',
+    headingColor: 'var(--slate)',
+    links: [
       { href: '/interest-list', label: 'Join Waitlist' },
     ],
   },
@@ -48,7 +58,7 @@ export default function Footer() {
         <div className="flex flex-wrap gap-12">
           {footerCols.map((col) => (
             <div key={col.heading}>
-              <p className="text-label mb-4" style={{ color: 'var(--slate)' }}>{col.heading}</p>
+              <p className="text-label mb-4" style={{ color: col.headingColor }}>{col.heading}</p>
               <div className="flex flex-col gap-2">
                 {col.links.map((l) => (
                   <Link key={l.href} href={l.href}

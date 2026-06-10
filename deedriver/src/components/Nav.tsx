@@ -76,14 +76,6 @@ export default function Nav() {
             </Link>
           ))}
 
-          {/* Investor portal — subtle separator */}
-          <span style={{ width: 1, height: 14, background: 'rgba(255,255,255,0.1)', display: 'block' }} />
-          <Link href="/investors"
-            style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.03em', transition: 'opacity 150ms' }}
-            className="hover:!opacity-80"
-          >
-            Investors
-          </Link>
         </div>
 
         {/* Desktop CTA */}
@@ -135,12 +127,6 @@ export default function Nav() {
             </Link>
           ))}
 
-          <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', marginTop: 8, paddingTop: 16 }}>
-            <Link href="/investors" onClick={() => setOpen(false)}
-              style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: 'var(--gold)', textDecoration: 'none', display: 'block', paddingBottom: 12 }}>
-              Investor Materials →
-            </Link>
-          </div>
 
           <Link href="/interest-list" onClick={() => setOpen(false)}
             style={{ marginTop: 4, display: 'block', textAlign: 'center', background: '#52B788', color: '#fff', borderRadius: 'var(--r-sm)', padding: '12px 24px', fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 500, textDecoration: 'none' }}>
