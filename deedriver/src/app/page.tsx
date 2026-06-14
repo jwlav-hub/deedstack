@@ -91,13 +91,6 @@ const problems = [
   { stat: '18–24 mo', label: 'traditional capital formation cycles for property developers' },
 ];
 
-const platformStats = [
-  { value: '6',      label: 'Properties Tokenized' },
-  { value: '$7.1M',  label: 'Total Value on Platform' },
-  { value: '711K',   label: 'DEED Tokens Issued' },
-  { value: '$100',   label: 'Minimum Investment' },
-];
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function PlatformPage() {
@@ -134,18 +127,8 @@ export default function PlatformPage() {
                 Browse Marketplace →
               </Link>
               <Link href="/how-it-works" style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', borderRadius: 'var(--r-md)', padding: '13px 28px', fontSize: 15, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.15)', transition: 'border-color 200ms, color 200ms' }} className="hover:!border-[rgba(255,255,255,0.4)] hover:!text-white">
-                Yield Deed
+                How It Works
               </Link>
-            </div>
-
-            {/* Platform stats */}
-            <div className="flex flex-wrap gap-6">
-              {platformStats.map((s) => (
-                <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--r-md)', padding: '16px 20px', minWidth: 130 }}>
-                  <p style={{ fontFamily: "'DM Mono', monospace", fontSize: '1.5rem', fontWeight: 600, color: '#52B788', lineHeight: 1 }}>{s.value}</p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', color: 'rgba(255,255,255,0.4)', marginTop: 4, letterSpacing: '0.02em' }}>{s.label}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
